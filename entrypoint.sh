@@ -3,7 +3,7 @@
 set
 
 echo "🎱Start to count lines of code..."
-max=`cloc .|grep -A 2 code|sed -n '3p'`
+max=`cloc ./src/lib/HiFPlacer/|grep -A 2 code|sed -n '3p'`
 if [ `echo $max|awk '{print NF}'` -eq 5 ]; then
     lang=`echo $max|awk '{print $1}'`
 else
