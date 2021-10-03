@@ -1,4 +1,7 @@
-# cloc-badge-action
+# cloc-badge-action-for-AMF-Placer
+
+WARNING: it is an action for my personal project and might be removed after some basic trials.
+
 cloc-badge-action
 
 Generating badge for line of codes with Github action.
