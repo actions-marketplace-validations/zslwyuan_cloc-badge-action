@@ -31,5 +31,5 @@ if [ -z "$(git status --porcelain)" ]; then
 else
     git add --all
     git commit -m "Auto Cloc Commit"
-    git push https://"$1"@github.com/zslwyuan/AMF-Placer.git cloc_code
+    git push https://zslwyuan:"$1"@github.com/zslwyuan/AMF-Placer.git cloc_code
 fi
