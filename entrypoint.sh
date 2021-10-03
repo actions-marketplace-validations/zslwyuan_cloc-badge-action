@@ -16,7 +16,7 @@ fi
 
 max=`cloc ./AMF-Placer/src/lib/HiFPlacer/|grep SUM`
 line=`echo $max|awk '{print $NF}'`
-comment =`echo $max|awk '{print $4}'`
+comment=`echo $max|awk '{print $4}'`
 echo $lang,$line
 rm AMF-Placer -rf
 
