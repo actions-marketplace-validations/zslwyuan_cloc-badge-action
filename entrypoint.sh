@@ -17,7 +17,7 @@ line=`echo $max|awk '{print $NF}'`
 echo $lang,$line
 rm AMF-Placer -rf
 
-git clone --branch cloc_code git@github.com:zslwyuan/AMF-Placer.git
+git clone --branch cloc_code https://github.com/zslwyuan/AMF-Placer.git
 cd  AMF-Placer
 
 wget https://img.shields.io/badge/$lang-$line-green?style=for-the-badge -O cloc_code.svg
