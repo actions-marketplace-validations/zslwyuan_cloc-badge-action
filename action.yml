@@ -1,4 +1,4 @@
-name: 'Count Lines of Codes and Comments'
+name: 'Count Lines of Codes of AMF-Placer'
 description: 'Generate the badges for the code line of your repositoryヾ(^▽^ヾ)'
 inputs:
   path:  # id of input
