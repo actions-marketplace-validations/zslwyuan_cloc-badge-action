@@ -11,6 +11,9 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+with:
+  github_token: ${{ secrets.GITHUB_TOKEN }}
+  branch: 'cloc_code'
 branding:
   icon: 'code'
   color: 'orange'
