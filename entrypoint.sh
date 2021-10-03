@@ -16,6 +16,7 @@ fi
 
 max=`cloc ./AMF-Placer/src/lib/HiFPlacer/|grep SUM`
 line=`echo $max|awk '{print $NF}'`
+comment =`echo $max|awk '{print $4}'`
 echo $lang,$line
 rm AMF-Placer -rf
 
@@ -23,6 +24,7 @@ git clone --branch cloc_code https://github.com/zslwyuan/AMF-Placer.git
 cd  AMF-Placer
 
 wget https://img.shields.io/badge/$lang-$line-green?style=for-the-badge -O cloc_code.svg
+wget https://img.shields.io/badge/comment-$comment-green?style=for-the-badge -O cloc_comment.svg
 
 git config --global user.email "push@no-reply.github.com"
 git config --global user.name "zslwyuan"
