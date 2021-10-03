@@ -13,6 +13,8 @@ else
     lang=`echo $max|awk '{print $1_$2}'`
 fi
 
+
+max=`cloc ./AMF-Placer/src/lib/HiFPlacer/|grep SUM`
 line=`echo $max|awk '{print $NF}'`
 echo $lang,$line
 rm AMF-Placer -rf
@@ -23,11 +25,11 @@ cd  AMF-Placer
 wget https://img.shields.io/badge/$lang-$line-green?style=for-the-badge -O cloc_code.svg
 
 git config --global user.email "push@no-reply.github.com"
-git config --global user.name "Cloc Badge Action"
+git config --global user.name "zslwyuan"
 if [ -z "$(git status --porcelain)" ]; then
     echo "Clean!"
 else
     git add --all
     git commit -m "Auto Cloc Commit"
-    git push origin cloc_code
+    git push https://"$1"@github.com/zslwyuan/AMF-Placer.git cloc_code
 fi
