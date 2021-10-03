@@ -4,6 +4,8 @@ set
 
 echo "Start to count lines of code..."
 echo "using cloc to check ${RUNNER_WORKSPACE}/AMF-Placer/src/lib/HiFPlacer/"
+echo "`ll`"
+echo "`pwd`"
 max=`cloc ${RUNNER_WORKSPACE}/AMF-Placer/src/lib/HiFPlacer/|grep -A 2 code|sed -n '3p'`
 if [ `echo $max|awk '{print NF}'` -eq 5 ]; then
     lang=`echo $max|awk '{print $1}'`
