@@ -15,8 +15,12 @@ fi
 
 line=`echo $max|awk '{print $NF}'`
 echo $lang,$line
+rm AMF-Placer -rf
 
-wget https://img.shields.io/badge/$lang-$line-green?style=for-the-badge -O cloc.svg
+git clone --branch cloc_code git@github.com:zslwyuan/AMF-Placer.git
+cd  AMF-Placer
+
+wget https://img.shields.io/badge/$lang-$line-green?style=for-the-badge -O cloc_code.svg
 
 git config --global user.email "push@no-reply.github.com"
 git config --global user.name "Cloc Badge Action"
@@ -25,5 +29,5 @@ if [ -z "$(git status --porcelain)" ]; then
 else
     git add --all
     git commit -m "Auto Cloc Commit"
-    git push origin $BRANCH
+    git push origin cloc_code
 fi
