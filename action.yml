@@ -5,6 +5,10 @@ inputs:
     description: 'The file path of the generated badge file.'
     required: false
     default: 'cloc.svg'
+  github_token:
+    description: 'Set a generated GITHUB_TOKEN for pushing to the remote branch.'
+    required: false
+    
 outputs:
   path: # id of output
     description: 'The time we greeted you'
